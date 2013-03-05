@@ -1,0 +1,72 @@
+header {
+	background:transparent url(upload/nl3.jpg) no-repeat;
+	padding-right:10px;
+	font-family:helvitica;
+	border-radius:6px;
+	margin:0px auto;
+	background-size:940px;
+}
+header a {
+	color:white;
+	-webkit-transition:color 1s;
+	font-size:30px;
+	padding:6px;
+	border-radius:6px;
+	margin-left:-10px;
+	padding-right:300px;
+}
+header a:hover {
+	color:#55DE28;
+	-webkit-transform:rotate(4deg);
+	text-decoration:none;
+}
+header h1, header h2 {
+	font-size:22px;
+	color:#55DE28;
+	margin-left:10px;
+}
+input.phone {
+	text-align:center;
+}
+body {
+	background:transparent url(upload/north.jpg) no-repeat;
+	background-size:1680px;
+	font-family:comic sans ms;
+}
+h1, p, label, li {
+	color:white;
+	font-size:16px;
+}
+h2, input#file {
+	color:white;
+}
+.form-horizontal .control-label {
+	color:white;
+}
+td, th, tr {
+	color:white;
+	font-size:16px;
+}
+td a {
+	color:white;
+}
+select {
+	margin-left:20px;
+}
+nav .input-append button {
+	height:inherit !important;
+}
+.input-append {
+	margin-top:10px;
+}
+section {
+	color:#777;
+}
+h4 {
+	background-color:white;
+	border-radius:6px;
+	padding:9px;
+}
+h4 a button.btn.pull-right {
+	padding:2px;
+}
