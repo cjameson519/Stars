@@ -7,19 +7,8 @@
 // make table called photos with photo_name photo_id photo_description photo_ext
 //EX 1, milky way, decription, .jpg
 //make folder to store images and in there have file names be id+ext EX 1.jpg(from above)
-// go to http://www.w3schools.com/php/php_file_upload.asp
+// go to http://www.w3schools.com/php/php_file_upload.asp 
 
-
-//check if user is searching 
-if(isset($_GET['q']) && $_GET['q'] !='') {
-	extract($_GET);
-	$where = "WHERE photo_name LIKE '%$q%'";
-	echo "<h4>Contacts containing $q!";
-	echo '<a href=\'./?p=list_stars\'><button type=\'button\' class=\'btn btn-success pull-right\'>Go Back!</button></a>';
-	echo "</h4>";
-} else {
-	$where='';
-}
 
 ?>
 
@@ -51,7 +40,7 @@ while(($contact = $results->fetch_assoc()) != null) {
 	extract($contact);
 	?>
 	<tr>
-		<td><?php echo "<a href=\"?p=view_pic&id=$photo_id\" >$photo_name</a></td>"; ?>
+		<td><?php echo "<a href=\"?p=view_pic&id=$photo_id\" method=\"post\">$photo_name</a></td>"; ?>
 		<td><?php echo $photo_des;
 			echo 	"<td><a href=\"?p=form_edit_pic&id=$photo_id\" class=\"btn btn-small\" ><i class='icon-wrench icon-green'></i></a>";
 			echo 	'<form style="display:inline;" method="post" action="./actions/delete.php">';

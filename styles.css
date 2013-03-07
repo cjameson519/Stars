@@ -29,7 +29,7 @@ input.phone {
 	text-align:center;
 }
 body {
-	background:transparent url(upload/north.jpg) no-repeat;
+	background:transparent url(upload/nl.jpg) no-repeat;
 	background-size:1680px;
 	font-family:comic sans ms;
 }
@@ -60,7 +60,7 @@ nav .input-append button {
 	margin-top:10px;
 }
 section {
-	color:#777;
+	color:white;
 }
 h4 {
 	background-color:white;
@@ -69,4 +69,8 @@ h4 {
 }
 h4 a button.btn.pull-right {
 	padding:2px;
+}
+input#button {
+	float:right;
+	margin-right:125px;
 }
