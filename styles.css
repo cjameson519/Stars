@@ -5,6 +5,7 @@ header {
 	border-radius:6px;
 	margin:0px auto;
 	background-size:940px;
+	background-attachment:fixed;
 }
 header a {
 	color:white;

@@ -5,6 +5,9 @@ require('../config/db.php');
 require('../config/app.php');
 require('../lib/functions.php');
 
+// Extract POST data to variables
+extract($_POST);
+
 $allowedExts = array("jpg", "jpeg", "gif", "png");
 $extension = end(explode(".", $_FILES["file"]["name"]));
 if ((($_FILES["file"]["type"] == "image/gif")
@@ -46,8 +49,6 @@ $required = array(
 	'photo_name',
 	'photo_des',
 );
-// Extract POST data to variables
-extract($_POST);
 
 // At this point, as a result of 'extract', we can
 // refer to, for example, the submitted last name as
@@ -63,11 +64,20 @@ foreach($required as $r) {
 		die();	
 	}
 }
+
+// echo '<pre>';	
+// print_r($_FILES);
+// echo '</pre>';
+// die();
+
+
+$file_name = $_FILES["file"]["name"];
+
 // Connect to the DB
 $conn = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
 // Execute query
-$sql = "INSERT INTO photos (photo_name,photo_des,photo_ext) VALUES ('$photo_name','$photo_des','$photo_ext')";
+$sql = "INSERT INTO photos (photo_name,photo_des,photo_ext) VALUES ('$photo_name','$photo_des','$file_name')";
 $conn->query($sql);
   
   $_SESSION['message'] = array(
@@ -78,5 +88,5 @@ $conn->query($sql);
   // Close DB connection
   $conn->close();
   // Redirect to list
-  //header('Location:../?p=list_stars');
+  header('Location:../?p=list_stars');
 ?>

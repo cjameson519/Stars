@@ -15,12 +15,6 @@
 			<?php echo input('photo_des','required')?>
 		</div>
 	</div>
-	<div class="control-group">
-		<label class="control-label" for="photo_ext">File type</label>
-		<div class="controls">
-			<?php echo input('photo_ext','Ex .jpg')?>
-		</div>
-	</div>
 		<label for="file">File!</label>
 		<input type="file" name="file" id="file"><br>
 <?php //form submission methods, use $_GET or $_POST, $_GET you use when submitting something wont change the server state, $_Post you use if you are changing the Server?>
