@@ -71,7 +71,7 @@ foreach($required as $r) {
 // die();
 
 
-$file_name = $_FILES["file"]["name"];
+$file_name = $_FILES["file"]["name"] . $_FILES["file"]["type"];
 
 // Connect to the DB
 $conn = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
@@ -88,5 +88,5 @@ $conn->query($sql);
   // Close DB connection
   $conn->close();
   // Redirect to list
-  header('Location:../?p=list_stars');
+ header('Location:../?p=list_stars');
 ?>
